@@ -1,43 +1,78 @@
-                                  Project Overview
-This project aims to develop a comprehensive system for financial advisors at Wells Fargo, enhancing the management of client portfolios and securities. The system is designed to streamline operations, improve efficiency, and provide a better experience for both advisors and clients.
+## Project Title: Financial Advisor Management System
 
-As a project analyst at Wells Fargo, I was tasked with creating a new system to assist financial advisors in managing their clients' portfolios. The existing solution was inadequate, and there was a need for a more efficient and scalable system that could handle multiple financial advisors and their clients.
+### Project Description
+The Financial Advisor Management System is designed to enhance the management of client portfolios and securities for financial advisors at Wells Fargo. This comprehensive system aims to streamline operations, improve efficiency, and provide a better experience for both advisors and clients. The project addresses the limitations of existing solutions by offering a scalable and efficient platform that can handle multiple financial advisors and their clients.
 
+As a project analyst at Wells Fargo, I was responsible for creating this new system to assist financial advisors in managing their clients' portfolios. The project involved understanding requirements, designing a robust data model, and implementing it using Java Persistence API (JPA) within a Spring framework application.
 
-My primary responsibilities included:
+### Installation Instructions
+To set up the Financial Advisor Management System, follow these steps:
 
-Understanding the requirements for the new system.
-Designing a data model that accurately represented the entities and relationships involved.
-Implementing the data model using Java Persistence API (JPA) within a Spring framework application.
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
 
-To achieve these objectives, I undertook the following steps:
+2. **Install Prerequisites**:
+   - Ensure you have Java 21 installed on your machine.
+   - Install Maven for dependency management.
 
-Requirements Analysis: I thoroughly reviewed the requirements provided by the project manager, which included functionalities for managing clients, portfolios, and securities.
-Data Model Design: I created an Entity Relationship Diagram (ERD) to visualize the data structure. This diagram outlined the entities (Advisor, Client, Portfolio, Security) and their relationships, ensuring that all necessary data points were captured.
+3. **Build the Project**:
+   Use Maven to compile the project:
+   ```bash
+   mvn clean install
+   ```
 
-I implemented the data model in Java using JPA. This involved:
+4. **Run the Application**:
+   Start the application using the following command:
+   ```bash
+   mvn spring-boot:run
+   ```
 
-Creating entity classes for each component of the data model.
-Annotating the classes with JPA annotations to define relationships and constraints.
-Ensuring that each class included constructors, getters, and setters for proper data manipulation.
-Testing and Validation: After implementation, I conducted tests to ensure that the data model functioned as intended, allowing for the creation, updating, and removal of clients and securities.
+### Usage Examples
+Once the application is running, you can interact with the system through its API endpoints. Here are some practical examples:
 
-The outcome of my efforts was a fully functional data model that met the project requirements. The system is now capable of:
+- **Create a New Advisor**:
+   ```bash
+   POST /advisors
+   {
+       "firstName": "John",
+       "lastName": "Doe",
+       "address": "123 Main St",
+       "phone": "555-1234",
+       "email": "john.doe@example.com"
+   }
+   ```
 
-Managing multiple financial advisors and their clients.
-Allowing financial advisors to create, update, and remove clients and securities.
-Ensuring data integrity and scalability for future enhancements.
+- **Get All Clients for an Advisor**:
+   ```bash
+   GET /advisors/{advisorId}/clients
+   ```
 
-Key Learnings
+- **Update a Client's Information**:
+   ```bash
+   PUT /clients/{clientId}
+   {
+       "firstName": "Jane",
+       "lastName": "Doe",
+       "address": "456 Elm St",
+       "phone": "555-5678",
+       "email": "jane.doe@example.com"
+   }
+   ```
 
-Understanding of JPA: I gained a solid understanding of the Java Persistence API as an object-relational mapping tool, which is crucial for bridging Java objects and relational databases.
+### Technologies Used
+- **Java 21**: The primary programming language used for development.
+- **Spring Framework**: A powerful framework for building Java applications, particularly for web applications.
+- **Java Persistence API (JPA)**: Used for object-relational mapping to manage database interactions.
+- **Maven**: A build automation tool used for managing project dependencies.
 
-Data Modeling Skills: I enhanced my skills in designing data models and visualizing them through ERDs, which are essential for effective database design.
+### Key Learnings
+- **Understanding of JPA**: Gained a solid understanding of JPA as an object-relational mapping tool, crucial for bridging Java objects and relational databases.
+- **Data Modeling Skills**: Enhanced skills in designing data models and visualizing them through Entity Relationship Diagrams (ERDs), essential for effective database design.
+- **Spring Framework Proficiency**: Became proficient in using the Spring framework for Java, widely used in enterprise applications.
+- **Collaboration and Communication**: Learned the importance of clear communication and collaboration within a software development team, especially when gathering requirements and validating designs.
 
-Spring Framework Proficiency: I became proficient in using the Spring framework for Java, which is widely used in enterprise applications.
-
-Collaboration and Communication: I learned the importance of clear communication and collaboration within a software development team, especially when gathering requirements and validating designs.
-
-
-This project not only allowed me to apply my technical skills in Java and Spring but also provided valuable insights into the software development lifecycle. I am excited about the potential impact of this system on the efficiency of financial advisory services at Wells Fargo and look forward to further opportunities to contribute to innovative solutions in the financial technology space.
+This project not only allowed me to apply my technical skills in Java and Spring but also provided valuable insights into the software development lifecycle. I am excited about the potential impact of this system on the efficiency of financial advisory services at Wells Fargo and look forward to further opportunities to contribute to innovative solutions in the financial technology space..
 
